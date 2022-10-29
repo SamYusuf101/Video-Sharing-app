@@ -6,7 +6,9 @@ import SideMenu from "./components/SideMenu";
 const Container = styled.div`
   display: flex;
 `;
-const Main = styled.div``;
+const Main = styled.div`
+  flex: 7;
+`;
 const Wrap = styled.div``;
 
 function App() {
