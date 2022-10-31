@@ -76,7 +76,9 @@ const ChannelCounter = styled.span`
   font-size: 12px;
 `;
 
-const ChannelDescription = styled.div``;
+const ChannelDescription = styled.div`
+  font-size: 14px;
+`;
 
 const Channel = styled.div`
   display: flex;
@@ -88,7 +90,16 @@ const ChannelInfo = styled.div`
   gap: 20px;
 `;
 
-const Subscribe = styled.button``;
+const Subscribe = styled.button`
+  background-color: #cc1a00;
+  font-weight: 500;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  height: max-content;
+  padding: 10px 20px;
+  cursor: pointer;
+`;
 
 function Videos() {
   return (
