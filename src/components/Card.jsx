@@ -52,7 +52,7 @@ function Card() {
           <Text>
             <Title>My Video</Title>
             <ChannelName>My Channel</ChannelName>
-            <Info>1,000000 views 1 day ago</Info>
+            <Info>1,000,000 views 1 day ago</Info>
           </Text>
         </Details>
       </Container>
