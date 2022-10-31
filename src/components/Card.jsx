@@ -4,18 +4,21 @@ import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 360px;
-  margin-bottom: 45px;
+  background-color: red;
+  margin-bottom: ${(props) => (props.type === "sm" ? "10px" : "45px")};
   cursor: pointer;
+  display: ${(props) => props.type === "sm" && "flex"};
+  gap: 10px;
 `;
 
 const Image = styled.img`
   width: 100%;
-  height: 202px;
+  height: ${(props) => (props.type === "sm" ? "120px" : "202px")};
   background-color: #999;
 `;
 const Details = styled.div`
   display: flex;
-  margin-top: 16px;
+  margin-top: ${(props) => props.type !== "sm" && "16px"};
   gap: 12px;
 `;
 
@@ -40,15 +43,22 @@ const ChannelImg = styled.img`
   height: 36px;
   border-radius: 50%;
   background-color: #999;
+  display: ${(props) => props.type === "sm" && "none"};
 `;
 
-function Card() {
+function Card({ type }) {
   return (
     <Link to="/video/test" style={{ textDecoration: "none", color: "inherit" }}>
-      <Container>
-        <Image src="https://btnafrica.com/wp-content/uploads/2022/02/Bleach-Anime-Return-In-2022-1.jpg" />
-        <Details>
-          <ChannelImg src="https://img1.ak.crunchyroll.com/i/spire2/e1a3fd2e8115a52fe102c7a5019c189c1665448338_main.jpg" />
+      <Container type={type}>
+        <Image
+          type={type}
+          src="https://btnafrica.com/wp-content/uploads/2022/02/Bleach-Anime-Return-In-2022-1.jpg"
+        />
+        <Details type={type}>
+          <ChannelImg
+            type={type}
+            src="https://img1.ak.crunchyroll.com/i/spire2/e1a3fd2e8115a52fe102c7a5019c189c1665448338_main.jpg"
+          />
           <Text>
             <Title>My Video</Title>
             <ChannelName>My Channel</ChannelName>

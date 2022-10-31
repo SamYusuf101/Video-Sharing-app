@@ -5,6 +5,8 @@ import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 import ThumbDownOffAltOutlinedIcon from "@mui/icons-material/ThumbDownOffAltOutlined";
 import ReplyOutlinedIcon from "@mui/icons-material/ReplyOutlined";
 import AddTaskOutlinedIcon from "@mui/icons-material/AddTaskOutlined";
+import Comments from "../Comments";
+import Card from "../Card";
 
 const Container = styled.div`
   display: flex;
@@ -152,8 +154,22 @@ function Videos() {
           </ChannelInfo>
           <Subscribe>Subscribe</Subscribe>
         </Channel>
+        <Hr />
+        <Comments />
       </Content>
-      <Recommendations>Recommendations</Recommendations>
+      <Recommendations>
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+        <Card type="sm" />
+      </Recommendations>
     </Container>
   );
 }
