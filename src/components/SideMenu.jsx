@@ -4,6 +4,7 @@ import Video from "../img/video.png";
 import HomeIcon from "@mui/icons-material/Home";
 import ExploreIcon from "@mui/icons-material/Explore";
 import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
+import { Link } from "react-router-dom";
 import LibraryAddCheckIcon from "@mui/icons-material/LibraryAddCheck";
 import HistoryIcon from "@mui/icons-material/History";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
@@ -73,10 +74,12 @@ function SideMenu() {
   return (
     <Container>
       <Wrapper>
-        <Logo>
-          <Img src={Video} />
-          Video
-        </Logo>
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+          <Logo>
+            <Img src={Video} />
+            Video
+          </Logo>
+        </Link>
         <Item>
           <HomeIcon />
           Home

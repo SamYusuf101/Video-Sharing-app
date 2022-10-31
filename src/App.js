@@ -11,7 +11,9 @@ const Container = styled.div`
 const Main = styled.div`
   flex: 7;
 `;
-const Wrap = styled.div``;
+const Wrap = styled.div`
+  padding: 10px 10px;
+`;
 
 function App() {
   return (
