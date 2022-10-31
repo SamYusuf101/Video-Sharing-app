@@ -54,6 +54,42 @@ const Info = styled.span`
   color: gray;
 `;
 
+const Image = styled.img`
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #999;
+`;
+
+const ChannelDetail = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const ChannelName = styled.span`
+  font-weight: 500;
+`;
+
+const ChannelCounter = styled.span`
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 12px;
+`;
+
+const ChannelDescription = styled.div``;
+
+const Channel = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const ChannelInfo = styled.div`
+  display: flex;
+  gap: 20px;
+`;
+
+const Subscribe = styled.button``;
+
 function Videos() {
   return (
     <Container>
@@ -92,6 +128,19 @@ function Videos() {
           </Buttons>
         </Details>
         <Hr />
+        <Channel>
+          <ChannelInfo>
+            <Image src="https://img1.ak.crunchyroll.com/i/spire2/e1a3fd2e8115a52fe102c7a5019c189c1665448338_main.jpg" />
+            <ChannelDetail>
+              <ChannelName>My Channel</ChannelName>
+              <ChannelCounter>300k Subscribers</ChannelCounter>
+              <ChannelDescription>
+                Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+              </ChannelDescription>
+            </ChannelDetail>
+          </ChannelInfo>
+          <Subscribe>Subscribe</Subscribe>
+        </Channel>
       </Content>
       <Recommendations>Recommendations</Recommendations>
     </Container>
