@@ -50,6 +50,9 @@ const Item = styled.div`
   align-items: center;
   gap: 12px;
   cursor: pointer;
+  &:hover {
+    background-color: gray;
+  }
 `;
 
 const Login = styled.div``;
@@ -102,12 +105,14 @@ function SideMenu() {
           History
         </Item>
         <Hr />
-        <Login>
-          Sign in to like videos, comment and subscribe
-          <Button>
-            <AccountCircleIcon /> SignIn
-          </Button>
-        </Login>
+        <Link to="/signin" style={{ textDecoration: "none" }}>
+          <Login>
+            Sign in to like videos, comment and subscribe
+            <Button>
+              <AccountCircleIcon /> SignIn
+            </Button>
+          </Login>
+        </Link>
         <Hr />
         <Item>
           <LibraryMusicIcon />

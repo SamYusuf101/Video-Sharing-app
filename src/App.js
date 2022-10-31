@@ -4,6 +4,7 @@ import Home from "./components/Pages/Home";
 import SideMenu from "./components/SideMenu";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Videos from "./components/Pages/Videos";
+import Login from "./components/Pages/Login";
 
 const Container = styled.div`
   display: flex;
@@ -26,6 +27,7 @@ function App() {
             <Routes>
               <Route path="/">
                 <Route index element={<Home />} />
+                <Route path="signin" element={<Login />} />
                 <Route path="video">
                   <Route path=":id" element={<Videos />} />
                 </Route>
